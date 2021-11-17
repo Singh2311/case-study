@@ -1,0 +1,48 @@
+<div class="timerLimit">
+    <form [formGroup]="timerForm" (submit)="startTime(timerForm.value)">
+        <div class="timerFormSection">
+            <label>Enter Timer Limit</label>
+            <div class="timelimitinput">
+                <input type="number" formControlName="timeLimit" [readonly]="!timeLimitZero" placeholder="Enter limit">
+                <div class="error" *ngIf="!timerForm.controls.timeLimit?.valid && (timerForm.controls.timeLimit?.dirty ||timerForm.controls.timeLimit?.touched)">
+                    <!-- <div [hidden]="!timerForm.controls.timeLimit?.errors?.required">
+                        Timer Limit is required
+                    </div> -->
+                    <div [hidden]="!timerForm.controls.timeLimit?.errors?.min">
+                        Min number should be 1
+                    </div>
+                    <div [hidden]="!timerForm.controls.timeLimit?.errors?.max">
+                        Max number should be less than or equal to 10000
+                    </div>
+            </div>
+
+            <div class="footer-buttom">
+                <button class="startpause action-button" type="submit">
+                    <ng-container *ngIf="timeLimitZero">
+                        Start
+                    </ng-container>
+                    <ng-container *ngIf="!timeLimitZero && pauseTimer">
+                        Continue
+                    </ng-container>
+                    <ng-container *ngIf="!timeLimitZero && !pauseTimer">
+                        Pause
+                    </ng-container>
+                </button>
+                <button class="reset action-button" type="button"(click)="resetTimer()" > Reset</button>
+            </div>
+    
+        </div>
+            
+  
+        </div>
+    </form>
+
+    <div class="timerList">
+        <ul>
+            <ng-container *ngFor="let data of allTimerData.data">
+                <li *ngIf="data.type ==2">Pause at {{data.limit}}</li>
+            </ng-container>
+            
+        </ul>
+    </div>
+</div>

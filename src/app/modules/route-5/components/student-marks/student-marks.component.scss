@@ -1,0 +1,35 @@
+@import './../../../../../assets/css/variable.scss';
+.table-head-section{
+    overflow-x: auto;
+    .student-table{
+        width: 100%;
+        border-collapse: inherit;
+        margin-top: 2em;
+    
+        td,th{
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background-color: #ddd;
+        }
+        tr:hover {
+            background-color: $color-white;
+        }
+        th {
+            padding: 12px 25px 12px 5px;
+            text-align: left;
+            // background-color: $color-primary;
+            color: $color-white;
+        }
+        .sorting{
+            background: $color-primary url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIUnC2nKLnT4or00PvyrQwrPzUZshQAOw==) no-repeat 90% 50%;
+        }
+        .sorting_asc{
+            background:$color-primary url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIRnC2nKLnT4or00Puy3rx7VQAAOw==) no-repeat 90% 50%;
+        }
+        .sorting_desc{
+            background:$color-primary url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIPnI+py+0/hJzz0IruwjsVADs=) no-repeat 90% 50%;
+        }
+        
+    }
+}

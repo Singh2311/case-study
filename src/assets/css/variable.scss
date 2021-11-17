@@ -1,0 +1,30 @@
+$color-primary: var(--blue);
+$color-secondary: var(--shade-white);
+$color-black: var(--black);
+$color-gray-dark: var(--gray-dark);
+$color-light-gray: var(--gray);
+$color-white: var(--white);
+$color-font1: var(--font-color1);
+$color-font2: var(--font-color2);
+$color-font3: var(--font-color3);
+$color-label: var(--label-color);
+$color-input: var(--input-color);
+$color-border: var(--border-color);
+$color-header: var(--header-color);
+
+
+:root {
+  --blue: #5E56E7;;
+  --white: #ffffff;
+  --shade-white: #F8F7FF;
+  --black: #333333;
+  --gray: #F0F0F6;
+  --gray-dark: #A0A0A0;
+  --font-color1 : #4bb3fd;
+  --font-color2 : #1b1b1b;
+  --font-color3 : #8a94a3;
+  --label-color : #515151;
+  --input-color: #6C6C6C;
+  --border-color: #000000;
+  --header-color: #c2bffc;
+}

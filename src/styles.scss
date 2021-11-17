@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/variable";
+body{
+    font-size: 20px!important;
+    background-color: $color-light-gray!important;
+}
+.f-s-48 {
+    font-size: 48px;
+}
+.f-s-30 {
+    font-size: 30px;
+}
+.f-s-18 {
+    font-size: 18px;
+}
+.f-s-20 {
+    font-size: 20px;
+}
+.f-s-16 {
+    font-size: 16px;
+}
+.cur-point{
+    cursor: pointer;
+}
+
+.body-section {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+} 
+@media (min-width: 576px) {
+    .body-section {
+        width: 540px!important;
+    }
+}
+@media (min-width: 768px) {
+    .body-section {
+        width: 720px!important;
+    }
+}
+@media (min-width: 992px) {
+    .body-section {
+        width: 960px!important;
+    }
+}
+@media (min-width: 1200px) {
+    .body-section {
+        width: 1140px!important;
+    }
+}

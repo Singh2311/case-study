@@ -1,0 +1,50 @@
+[
+    {
+        "name":"abc",
+        "class": 4,
+        "section":"D",
+        "sub1":23,
+        "sub2":32,
+        "sub3":43
+    },
+    {
+        "name":"def",
+        "class": 1,
+        "section":"A",
+        "sub1":43,
+        "sub2":62,
+        "sub3":53
+    },
+    {
+        "name":"fbc",
+        "class": 2,
+        "section":"B",
+        "sub1":43,
+        "sub2":52,
+        "sub3":83
+    },
+    {
+        "name":"uyc",
+        "class": 5,
+        "section":"C",
+        "sub1":43,
+        "sub2":62,
+        "sub3":93
+    },
+    {
+        "name":"abv",
+        "class": 6,
+        "section":"D",
+        "sub1":43,
+        "sub2":23,
+        "sub3":87
+    },
+    {
+        "name":"ewr",
+        "class": 8,
+        "section":"D",
+        "sub1":76,
+        "sub2":54,
+        "sub3":74
+    }
+]

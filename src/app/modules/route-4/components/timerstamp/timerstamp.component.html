@@ -1,0 +1,16 @@
+<div class="timestamp">
+    <ul *ngIf="allTimerData && allTimerData.data && allTimerData.data.length>0">
+        <li *ngFor="let interval of allTimerData.data;let i=index">
+            <ng-container *ngIf="i<11">
+                <ng-container *ngIf="interval.type==1">
+                    Started at
+                </ng-container>
+                <ng-container *ngIf="interval.type==2">
+                    Paused at
+                </ng-container>
+                 {{interval.date}}
+            </ng-container>
+        </li>
+    </ul>
+    <p *ngIf="!(allTimerData && allTimerData.data && allTimerData.data.length>0)">No data</p>
+</div>

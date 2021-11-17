@@ -1,0 +1,19 @@
+<div class="body-section timer">
+    <div class="timerpart1 timersection">
+        <div class="timersection-container1 timerheadsection timer-border timer-center">
+            <app-countdowntimer [countTimeData]="countTime" [timerLimitPauseStatus]="timerLimitPauseStatus" (timerDataCountSendData)="timerDataCountSendData($event)" (timeLeft)="timeLeft($event)"></app-countdowntimer>
+        </div>
+        <div class="timersection-container2 timerheadsection timer-border">
+            <app-timerlimit (timeLimit)="getCountTime($event)" [allTimerData]="allTimerData" [totalTimeLeftZero]="totalTimeLeftZero" (timerLimitPauseStatusSendData)="timerLimitPauseStatusSendData($event)"></app-timerlimit>
+        </div>
+    </div>
+    <div class="timerpart2 timersection">
+        <div class="timersection-container1 timerheadsection timer-center timer-border">
+            <app-timerstamp [allTimerData]="allTimerData"></app-timerstamp>
+        </div>
+        <div class="timersection-container2 timerheadsection timer-border">
+        <app-countclicks [allTimerData]="allTimerData"></app-countclicks>
+        </div>
+    </div>
+   
+</div>

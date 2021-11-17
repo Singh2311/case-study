@@ -1,0 +1,66 @@
+<div class="body-section">
+        <div class="top-row">
+            <h3>Products</h3>
+            <div class="filter-action">
+                <div class="filter-content">
+                    <select class="filter-dropdown cur-point" (change)="sortProducts($event)">
+                        <option *ngFor="let filter of sortFilter" value="{{filter.value}}">
+                             {{filter.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="list-type cur-point" (click)="changeView(2)" [ngClass]="commonServiceService.productListType==2 ? '':'opacity-5'">
+                    <img src="assets/image/list.png">
+                </div>
+                <div class="grid-type cur-point" (click)="changeView(1)" [ngClass]="commonServiceService.productListType==2 ? 'opacity-5':''">
+                    <img src="assets/image/grid.png">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="product-list-section"
+            *ngIf="allProductList$ && allProductList$.length>0">
+            <div *ngFor="let list of allProductList$"  [ngClass]="commonServiceService.productListType==2 ? 'product-list-card-list':'product-list-card-grid'">
+                <div class="book-list-single-card-section cur-point">
+                    <div class="product-data">
+                        <div class="product-image">
+                        <img src="https://startup-rebate-bkt.s3.amazonaws.com/rebates_admin_images/Affiliate+Management/Affiliate+Vendor/Company+Details/Company+Logo/Web/Favro.jpg" alt = '...'>
+                        </div>
+                        <div class="product-info f-s-18 head-word" *ngIf="commonServiceService.productListType==1">{{list.Name}}</div>
+                        <div class="product-price f-s-16" *ngIf="commonServiceService.productListType==1"><span>$</span>{{list.Price}}</div>
+                    </div>
+                    <div class="product-rating" *ngIf="commonServiceService.productListType==1">
+                        <span>
+                            {{list.RatingAvg}}<img src="assets/image/star.svg">
+                        </span></div>
+                </div>
+                <div class="right-section-list" *ngIf="commonServiceService.productListType==2">
+                    <div class="top-div">
+                        <div class="card-heading head-word">
+                            {{list.Name}}
+                        </div>
+                        <div class="card-description">
+                            {{list.Description}}
+                        </div>
+                    </div>
+                    <div class="bottom-div">
+                        <div class="product-info-data">
+                            <div class="product-price">
+                                ${{list.Price}}
+                            </div>
+                            <div class="brand head-word">
+                                {{list.Brand}}
+                            </div>
+                        </div>
+                        <div class="product-rating">
+                            <span>
+                                {{list.RatingAvg}}<img src="assets/image/star.svg">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+ </div>
